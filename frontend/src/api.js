@@ -13,7 +13,7 @@ api.interceptors.request.use(
     (config)=>{
         config.headers.Authorization=`Bearer ${ACCESS_TOKEN}`
         if(token){
-            config.headers.Authorization=`Bearer ${token}`
+            config.headers.Authorization=`Bearer ${token}`  //adding authorizaiton header
         }
         return config;
         (error)=>{
@@ -21,3 +21,5 @@ api.interceptors.request.use(
         }
     }
 )
+
+export default api;
